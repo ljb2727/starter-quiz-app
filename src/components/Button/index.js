@@ -14,9 +14,11 @@ const StyledButton = styled.button`
     cursor: pointer;
     outline: none;
     font-weight: 700;
+    width: 100%;
+    transition: all 0.1s;
     font-size: ${(props) => (props.fontSize === "big" ? "32px" : "16px")};
     background-color: ${(props) => props.theme.primaryColor100};
-    &:hover{
+    &:active{
         background-color: ${(props) => props.theme.primaryColor80};
     }
     
