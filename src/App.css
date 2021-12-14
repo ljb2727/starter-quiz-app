@@ -8,10 +8,4 @@
 }
 
 body{color: var(--gray)}
-/* body{background-color: var(--dark);} */
-.answer-section{
-  display:flex;
-  flex-direction: column;
-}
-
 

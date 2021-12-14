@@ -1,49 +1,28 @@
 // App.js
-import React, { useState } from "react";
-import { QUIZZES } from "../constants";
+import React, {useState} from "react";
 import { ThemeProvider } from "styled-components";
 import theme from "../theme";
-import Container from "./Container";
-import AnswerGroup from "./AnswerGroup";
-import QuestionSection from "./QuestionSection";
-import ResultSection from "./ResultSection";
-import "../App.css";
+import GlobalStyle from "../globalStyle"
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import Quiz from "../pages/Quiz"
+import Landing from "../pages/Landing"
+import Navigation from "./Navigation"
+import Result from "../pages/Result"
 
 function App() {
-    const [currentNo, setCurrentNo] = useState(0)
-    const [showResult, setShowResult] = useState(false)
-    const [score, setScore] = useState(0)
-    const handleClick = (isCorrect) => {
-      if(isCorrect) {
-        setScore((score)=>score+1)
-      }
-      if(currentNo === QUIZZES.length-1){
-        setShowResult(true)
-      }else{
-        setCurrentNo((currentNo) => currentNo+1)
-      }
-    };
-    const reStart = ()=> {
-      setShowResult(false)
-      setCurrentNo(0)
-      setScore(0)
-    }
-
-    const convertedScore = Math.floor((score / QUIZZES.length) * 100)
-
+    const [score, setScore] = useState(0);
     return (
         <ThemeProvider theme={theme}>
-          {showResult ? (
-              <Container>
-                <ResultSection convertedScore={convertedScore} reStart={reStart}/>
-              </Container>
-            ) : (
-              <Container>
-                <QuestionSection currentNo={currentNo}/>
-                <AnswerGroup currentNo={currentNo} handleClick={handleClick} />
-              </Container>
-              )
-            }
+          <GlobalStyle/>
+          <Router>
+            <Navigation/>
+            <Routes>
+              <Route path="/" exact element={<Landing/>}/>
+              <Route path="/quiz" element={<Quiz setScore={setScore}/>}/>
+              <Route path="/result" element={<Result score={score} setScore={setScore}/>}/>
+            </Routes>
+          </Router>
+          
         </ThemeProvider>
     );
 }

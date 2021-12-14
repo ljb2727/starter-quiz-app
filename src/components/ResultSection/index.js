@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from 'react-router-dom'
+
 
 const ResultTitle = styled.h1`
     font-size: 20px;
@@ -19,7 +21,7 @@ const ResultSection = ({ convertedScore,reStart }) => (
     <>
         <ResultTitle>당신의 점수는?</ResultTitle>
         <Score>{convertedScore}</Score>
-        <button className="answer" onClick={reStart} >re start</button>
+        <Link to="/"><button className="answer" onClick={reStart}>re start</button></Link>
     </>
 );
 export default ResultSection;
