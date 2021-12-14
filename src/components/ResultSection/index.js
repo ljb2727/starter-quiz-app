@@ -21,7 +21,6 @@ const ResultSection = ({ convertedScore,reStart }) => (
     <>
         <ResultTitle>당신의 점수는?</ResultTitle>
         <Score>{convertedScore}</Score>
-        <Link to="/"><button className="answer" onClick={reStart}>re start</button></Link>
     </>
 );
 export default ResultSection;

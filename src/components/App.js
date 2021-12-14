@@ -1,13 +1,13 @@
 // App.js
 import React, {useState} from "react";
 import { ThemeProvider } from "styled-components";
-import theme from "../theme";
-import GlobalStyle from "../globalStyle"
+import theme from "theme";
+import GlobalStyle from "globalStyle"
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import Quiz from "../pages/Quiz"
-import Landing from "../pages/Landing"
-import Navigation from "./Navigation"
-import Result from "../pages/Result"
+import Quiz from "pages/Quiz"
+import Landing from "pages/Landing"
+import Navigation from "components/Navigation"
+import Result from "pages/Result"
 
 function App() {
     const [score, setScore] = useState(0);

@@ -1,9 +1,8 @@
 // Pages/Landing/index
-import Container from "../../components/Container";
 import styled from "styled-components";
-import cover from "../../assets/test.jpg";
-import Button from "../../components/Button";
+import cover from "assets/test.jpg";
 import { Link } from "react-router-dom";
+import { Container, Button } from "components";
 
 const Title = styled.h1`
     font-size: 40px;
