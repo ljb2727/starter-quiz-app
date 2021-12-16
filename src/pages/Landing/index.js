@@ -1,7 +1,6 @@
 // Pages/Landing/index
 import styled from "styled-components";
 import cover from "assets/test.jpg";
-import { Link } from "react-router-dom";
 import { Container, Button } from "components";
 
 const Title = styled.h1`
@@ -41,9 +40,7 @@ const Landing = () => (
         <Text>
             텍스트 
         </Text>
-        <Link to="/quiz">
-            <Button text="df"></Button>
-        </Link>
+        <Button to="/quiz">클릭</Button>
     </Container>
 );
 
