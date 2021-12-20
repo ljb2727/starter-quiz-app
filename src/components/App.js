@@ -23,6 +23,7 @@ function App() {
           <HelmetProvider>
             <Helmet>
                 <title>title</title>{/* URL 정보 */}
+                <link rel="icon" href={favicon} />
                 <meta property="og:url" content={currentUrl} />
                 {/* title 정보 */}
                 <meta property="og:title" content="일론 머스크 지수 테스트하기" />
