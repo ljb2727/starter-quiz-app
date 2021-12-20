@@ -30,6 +30,26 @@ const QUIZZES = [
             { text: "Everything CO.", isCorrect: false },
         ],
     },
+    {
+        id: 4,
+        question: "4",
+        answers: [
+            { text: "X.com", isCorrect: true },
+            { text: "Zip2 Corporation", isCorrect: false },
+            { text: "Alpha Exploration co.", isCorrect: false },
+            { text: "Everything CO.", isCorrect: false },
+        ],
+    },
+    {
+        id: 5,
+        question: "5",
+        answers: [
+            { text: "X.com", isCorrect: true },
+            { text: "Zip2 Corporation", isCorrect: false },
+            { text: "Alpha Exploration co.", isCorrect: false },
+            { text: "Everything CO.", isCorrect: false },
+        ],
+    },
 ];
 
 export { QUIZZES };

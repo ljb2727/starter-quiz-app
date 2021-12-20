@@ -1,26 +1,34 @@
+// pages/Result/index.js
+
 import React from "react";
 import styled from "styled-components";
-import { Link } from 'react-router-dom'
+import RESULT from "./result";
+import { SocialButtonGroup } from "components";
 
-
-const ResultTitle = styled.h1`
-    font-size: 20px;
+const SectionTitle = styled.h1`
+    font-size: 24px;
     font-weight: bold;
-    margin-bottom: 8px;
+    margin-top: 0px;
+    margin-bottom: 56px;
     text-align: center;
 `;
 
-const Score = styled.p`
-    font-size: 30px;
-    margin: 40px;
+const ResultTitle = styled.div`
+    font-size: 24px;
+    margin-bottom: 56px;
     text-align: center;
-    color: ${(props) => props.theme.primaryColor100};
 `;
 
-const ResultSection = ({ convertedScore,reStart }) => (
+const Image = styled.img`
+    display:block
+`
+
+const ResultSection = ({ cCode }) => (
     <>
-        <ResultTitle>당신의 점수는?</ResultTitle>
-        <Score>{convertedScore}</Score>
+        <SectionTitle>당신은 혹시?</SectionTitle>
+        <Image src={RESULT[cCode].src}/>
+        <ResultTitle>{RESULT[cCode].title}</ResultTitle>
+        <SocialButtonGroup></SocialButtonGroup>
     </>
 );
 export default ResultSection;

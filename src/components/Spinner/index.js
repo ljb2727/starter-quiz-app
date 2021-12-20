@@ -15,9 +15,9 @@ const Spinner = () => {
     return (
         <Flex>
             <ScaleLoader 
-                height="16"
-                width="10"
-                radius="8"
+                height="16px"
+                width="10px"
+                radius="8px"
                 color={color}
             />
         </Flex>
